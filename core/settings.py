@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 activate_app = lambda app_name: f"{app_name}.apps.{app_name.capitalize()}Config"
 
 
+SITE_ID = 1
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 
     #intetnal apps
     activate_app('blog'),
